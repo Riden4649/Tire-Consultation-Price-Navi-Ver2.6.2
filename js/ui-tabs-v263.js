@@ -17,22 +17,41 @@
       <button type="button" data-app-tab="data">データ確認</button>
       <button type="button" data-app-tab="settings">設定</button>`;
 
-    const anchor = shell.querySelector(".season-switcher") || shell.firstElementChild;
-    shell.insertBefore(nav, anchor);
-
-    const topSections = () => [...shell.children].filter(node => node.tagName === "SECTION");
     const intro = shell.querySelector(".intro");
     const season = shell.querySelector(".season-switcher");
+    const anchor = season || shell.firstElementChild;
+    shell.insertBefore(nav, anchor);
+
+    // 商談画面の縦スペースを優先。旧イントロコピーは常時非表示。
+    if (intro) intro.hidden = true;
+
+    const topSections = () => [...shell.children].filter(node => node.tagName === "SECTION");
+
+    function ensurePricebookImportButton() {
+      const input = document.querySelector("#fileInput");
+      const drop = document.querySelector("#dropZone");
+      if (!input || !drop || document.querySelector("#pricebookImportButton")) return;
+      const button = document.createElement("button");
+      button.id = "pricebookImportButton";
+      button.type = "button";
+      button.className = "pricebook-import-button";
+      button.textContent = "Excel価格表を選択";
+      button.addEventListener("click", event => {
+        event.preventDefault();
+        event.stopPropagation();
+        input.click();
+      });
+      drop.insertAdjacentElement("afterend", button);
+    }
 
     function setAdminMode(mode) {
       const body = admin.querySelector(".admin-body");
       if (!body) return;
       const sections = [...body.children].filter(node => node.tagName === "SECTION");
-      const first = sections[0];
       const second = sections[1];
-      if (first) first.classList.toggle("settings-only", mode === "settings");
       if (second) second.hidden = mode !== "settings";
       admin.dataset.mode = mode;
+      if (mode === "pricebook") ensurePricebookImportButton();
     }
 
     function showTab(tab) {
@@ -40,9 +59,9 @@
         const selected = button.dataset.appTab === tab;
         button.classList.toggle("selected", selected);
         button.setAttribute("aria-pressed", String(selected));
+        if (!selected) button.blur();
       });
 
-      if (intro) intro.hidden = tab !== "sales";
       if (season) season.hidden = !(tab === "sales" || tab === "pricebook");
       admin.hidden = !(tab === "pricebook" || tab === "settings");
       if (!admin.hidden) admin.open = true;
@@ -58,20 +77,26 @@
           section.hidden = tab !== "sales";
           return;
         }
-        if (section !== dataQuality) section.hidden = tab !== "sales";
+        section.hidden = tab !== "sales";
       });
 
-      if (dataQuality) {
-        if (tab === "data") dataQuality.hidden = false;
-        else dataQuality.hidden = true;
-      }
+      if (dataQuality) dataQuality.hidden = tab !== "data";
 
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      // iPad Safariのタップ後ハイライト/フォーカス残りを消す。
+      requestAnimationFrame(() => document.activeElement?.blur?.());
+      window.scrollTo({ top: 0, behavior: "auto" });
     }
 
+    nav.addEventListener("pointerup", event => {
+      const button = event.target.closest("[data-app-tab]");
+      if (!button) return;
+      event.preventDefault();
+      showTab(button.dataset.appTab);
+    });
     nav.addEventListener("click", event => {
       const button = event.target.closest("[data-app-tab]");
-      if (button) showTab(button.dataset.appTab);
+      if (!button) return;
+      if (event.detail === 0) showTab(button.dataset.appTab);
     });
 
     const observer = new MutationObserver(() => {
@@ -83,6 +108,7 @@
     });
     observer.observe(shell, { childList: true });
 
+    ensurePricebookImportButton();
     showTab("sales");
   }
 
