@@ -1,4 +1,4 @@
-const CACHE_NAME = "consultation-price-navi-v267-ai-team";
+const CACHE_NAME = "consultation-price-navi-v267-ai-team-r2";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -27,6 +27,8 @@ const APP_SHELL = [
   "./js/ui-tabs-v263.js?v=20260901-v266-management-tab",
   "./js/sales-flow-v267.js",
   "./js/sales-flow-v267.js?v=20260901-v267-ai-team",
+  "./js/version-v267.js",
+  "./js/version-v267.js?v=20260901-v267",
   "./vendor/jszip.min.js",
   "./icons/apple-touch-icon.png",
   "./icons/favicon-32.png",
