@@ -4,13 +4,34 @@
   const badge = document.querySelector("#connectivityBadge");
   const META_KEY = "tire-consultation-offline-meta-v1";
 
-  function loadVehicleQuickSpec() {
-    if (document.querySelector('script[data-vehicle-quick-spec]')) return;
-    const script = document.createElement("script");
-    script.src = "js/vehicle-quick-spec.js?v=20260901-v263-vehicle-spec";
-    script.defer = true;
-    script.dataset.vehicleQuickSpec = "1";
-    document.head.appendChild(script);
+  function loadEnhancementStyles() {
+    const styles = [
+      ["vehicle-quick-spec", "css/vehicle-quick-spec.css?v=20260901-v264-size-filter"],
+      ["ui-tabs", "css/ui-tabs-v263.css?v=20260901-v263-tabs"]
+    ];
+    styles.forEach(([key, href]) => {
+      if (document.querySelector(`link[data-enhancement-style="${key}"]`)) return;
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = href;
+      link.dataset.enhancementStyle = key;
+      document.head.appendChild(link);
+    });
+  }
+
+  function loadEnhancementScripts() {
+    const scripts = [
+      ["vehicle-quick-spec", "js/vehicle-quick-spec.js?v=20260901-v264-size-filter"],
+      ["ui-tabs", "js/ui-tabs-v263.js?v=20260901-v263-tabs"]
+    ];
+    scripts.forEach(([key, src]) => {
+      if (document.querySelector(`script[data-enhancement-script="${key}"]`)) return;
+      const script = document.createElement("script");
+      script.src = src;
+      script.defer = true;
+      script.dataset.enhancementScript = key;
+      document.head.appendChild(script);
+    });
   }
 
   function updateConnectivity() {
@@ -32,7 +53,8 @@
     window.dispatchEvent(new CustomEvent("app-cache-ready"));
   }
 
-  loadVehicleQuickSpec();
+  loadEnhancementStyles();
+  loadEnhancementScripts();
   updateConnectivity();
   window.addEventListener("online", updateConnectivity);
   window.addEventListener("offline", updateConnectivity);
