@@ -4,6 +4,15 @@
   const badge = document.querySelector("#connectivityBadge");
   const META_KEY = "tire-consultation-offline-meta-v1";
 
+  function loadVehicleQuickSpec() {
+    if (document.querySelector('script[data-vehicle-quick-spec]')) return;
+    const script = document.createElement("script");
+    script.src = "js/vehicle-quick-spec.js?v=20260901-v263-vehicle-spec";
+    script.defer = true;
+    script.dataset.vehicleQuickSpec = "1";
+    document.head.appendChild(script);
+  }
+
   function updateConnectivity() {
     if (!badge) return;
     const standalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
@@ -23,6 +32,7 @@
     window.dispatchEvent(new CustomEvent("app-cache-ready"));
   }
 
+  loadVehicleQuickSpec();
   updateConnectivity();
   window.addEventListener("online", updateConnectivity);
   window.addEventListener("offline", updateConnectivity);
