@@ -7,7 +7,8 @@
   function loadEnhancementStyles() {
     const styles = [
       ["vehicle-quick-spec", "css/vehicle-quick-spec.css?v=20260901-v264-size-filter"],
-      ["ui-tabs", "css/ui-tabs-v263.css?v=20260901-v266-management-tab"]
+      ["ui-tabs", "css/ui-tabs-v263.css?v=20260901-v266-management-tab"],
+      ["sales-flow", "css/sales-flow-v267.css?v=20260901-v267-ai-team"]
     ];
     styles.forEach(([key, href]) => {
       if (document.querySelector(`link[data-enhancement-style="${key}"]`)) return;
@@ -22,7 +23,8 @@
   function loadEnhancementScripts() {
     const scripts = [
       ["vehicle-quick-spec", "js/vehicle-quick-spec.js?v=20260901-v264-size-filter"],
-      ["ui-tabs", "js/ui-tabs-v263.js?v=20260901-v266-management-tab"]
+      ["ui-tabs", "js/ui-tabs-v263.js?v=20260901-v266-management-tab"],
+      ["sales-flow", "js/sales-flow-v267.js?v=20260901-v267-ai-team"]
     ];
     scripts.forEach(([key, src]) => {
       if (document.querySelector(`script[data-enhancement-script="${key}"]`)) return;
