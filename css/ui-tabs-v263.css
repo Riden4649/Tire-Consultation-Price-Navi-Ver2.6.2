@@ -1,11 +1,9 @@
-.app-mode-tabs{position:sticky;top:0;z-index:35;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0 0 12px;padding:8px;border:1px solid rgba(31,62,52,.12);border-radius:16px;background:rgba(250,252,251,.96);backdrop-filter:blur(12px);box-shadow:0 8px 20px rgba(31,62,52,.06)}
+.app-mode-tabs{position:sticky;top:0;z-index:35;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0 0 12px;padding:8px;border:1px solid rgba(31,62,52,.12);border-radius:16px;background:rgba(250,252,251,.96);backdrop-filter:blur(12px);box-shadow:0 8px 20px rgba(31,62,52,.06)}
 .app-mode-tabs button{-webkit-appearance:none;appearance:none;-webkit-tap-highlight-color:transparent;outline:none;min-height:44px;border:1px solid transparent;border-radius:12px;background:transparent;color:#53675f;font-size:13px;font-weight:800;box-shadow:none;transition:background .12s ease,color .12s ease,box-shadow .12s ease}
 .app-mode-tabs button:hover,.app-mode-tabs button:focus,.app-mode-tabs button:focus-visible,.app-mode-tabs button:active{outline:none;box-shadow:none}
 .app-mode-tabs button:not(.selected):hover,.app-mode-tabs button:not(.selected):focus,.app-mode-tabs button:not(.selected):active{background:transparent;color:#53675f}
 .app-mode-tabs button.selected,.app-mode-tabs button.selected:hover,.app-mode-tabs button.selected:focus,.app-mode-tabs button.selected:active{background:#2f6b57;color:#fff;box-shadow:0 5px 12px rgba(47,107,87,.18)}
-#adminPanel[data-mode="pricebook"] .offline-panel,#adminPanel[data-mode="pricebook"] .store-settings{display:none!important}
-#adminPanel[data-mode="settings"] .admin-body>section:first-child>:not(.offline-panel):not(.store-settings){display:none!important}
-#adminPanel[data-mode="settings"] .offline-panel,#adminPanel[data-mode="settings"] .store-settings{display:block!important}
+#adminPanel[data-mode="management"] .admin-body>section{display:block!important}
 .pricebook-import-button{display:block;width:100%;min-height:48px;margin:10px 0 14px;border:0;border-radius:12px;background:#2f6b57;color:#fff;font-size:14px;font-weight:800;-webkit-tap-highlight-color:transparent}
 .pricebook-import-button:focus,.pricebook-import-button:active{outline:none;box-shadow:none}
-@media(max-width:760px){.app-mode-tabs{gap:5px;padding:6px;margin-bottom:10px}.app-mode-tabs button{min-height:40px;font-size:11px}}
+@media(max-width:760px){.app-mode-tabs{gap:5px;padding:6px;margin-bottom:10px}.app-mode-tabs button{min-height:40px;font-size:12px}}
