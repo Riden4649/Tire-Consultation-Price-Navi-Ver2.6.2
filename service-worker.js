@@ -1,4 +1,4 @@
-const CACHE_NAME = "consultation-price-navi-v267-ai-team-r2";
+const CACHE_NAME = "consultation-price-navi-v267-ai-team-r3";
 const APP_SHELL = [
   "./",
   "./index.html",
