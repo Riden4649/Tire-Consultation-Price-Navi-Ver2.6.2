@@ -31,7 +31,7 @@
       if (document.querySelector(`script[data-enhancement-script="${key}"]`)) return;
       const script = document.createElement("script");
       script.src = src;
-      script.defer = true;
+      script.async = false;
       script.dataset.enhancementScript = key;
       document.head.appendChild(script);
     });
