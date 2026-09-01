@@ -1,4 +1,4 @@
-const CACHE_NAME = "consultation-price-navi-v264-size-tabs";
+const CACHE_NAME = "consultation-price-navi-v265-ipad-fix";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -8,7 +8,7 @@ const APP_SHELL = [
   "./css/vehicle-quick-spec.css",
   "./css/vehicle-quick-spec.css?v=20260901-v264-size-filter",
   "./css/ui-tabs-v263.css",
-  "./css/ui-tabs-v263.css?v=20260901-v263-tabs",
+  "./css/ui-tabs-v263.css?v=20260901-v265-ipad-fix",
   "./data/brand-config.js",
   "./data/brand-config.js?v=20260818-v262",
   "./js/workbook.js",
@@ -22,7 +22,7 @@ const APP_SHELL = [
   "./js/vehicle-quick-spec.js",
   "./js/vehicle-quick-spec.js?v=20260901-v264-size-filter",
   "./js/ui-tabs-v263.js",
-  "./js/ui-tabs-v263.js?v=20260901-v263-tabs",
+  "./js/ui-tabs-v263.js?v=20260901-v265-ipad-fix",
   "./vendor/jszip.min.js",
   "./icons/apple-touch-icon.png",
   "./icons/favicon-32.png",
