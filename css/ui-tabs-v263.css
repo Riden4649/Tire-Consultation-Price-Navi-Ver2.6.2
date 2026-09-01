@@ -1,0 +1,6 @@
+.app-mode-tabs{position:sticky;top:0;z-index:35;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0 0 18px;padding:8px;border:1px solid rgba(31,62,52,.12);border-radius:16px;background:rgba(250,252,251,.96);backdrop-filter:blur(12px);box-shadow:0 8px 20px rgba(31,62,52,.06)}
+.app-mode-tabs button{min-height:44px;border:1px solid transparent;border-radius:12px;background:transparent;color:#53675f;font-size:13px;font-weight:800}.app-mode-tabs button.selected{background:#2f6b57;color:#fff;box-shadow:0 5px 12px rgba(47,107,87,.18)}
+#adminPanel[data-mode="pricebook"] .offline-panel,#adminPanel[data-mode="pricebook"] .store-settings{display:none!important}
+#adminPanel[data-mode="settings"] .admin-body>section:first-child>:not(.offline-panel):not(.store-settings){display:none!important}
+#adminPanel[data-mode="settings"] .offline-panel,#adminPanel[data-mode="settings"] .store-settings{display:block!important}
+@media(max-width:760px){.app-mode-tabs{gap:5px;padding:6px}.app-mode-tabs button{min-height:40px;font-size:11px}}
