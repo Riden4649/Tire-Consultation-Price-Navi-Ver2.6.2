@@ -7,7 +7,7 @@
   function loadEnhancementStyles() {
     const styles = [
       ["vehicle-quick-spec", "css/vehicle-quick-spec.css?v=20260901-v264-size-filter"],
-      ["ui-tabs", "css/ui-tabs-v263.css?v=20260901-v263-tabs"]
+      ["ui-tabs", "css/ui-tabs-v263.css?v=20260901-v265-ipad-fix"]
     ];
     styles.forEach(([key, href]) => {
       if (document.querySelector(`link[data-enhancement-style="${key}"]`)) return;
@@ -22,7 +22,7 @@
   function loadEnhancementScripts() {
     const scripts = [
       ["vehicle-quick-spec", "js/vehicle-quick-spec.js?v=20260901-v264-size-filter"],
-      ["ui-tabs", "js/ui-tabs-v263.js?v=20260901-v263-tabs"]
+      ["ui-tabs", "js/ui-tabs-v263.js?v=20260901-v265-ipad-fix"]
     ];
     scripts.forEach(([key, src]) => {
       if (document.querySelector(`script[data-enhancement-script="${key}"]`)) return;
