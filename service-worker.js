@@ -1,10 +1,12 @@
-const CACHE_NAME = "consultation-price-navi-v262";
+const CACHE_NAME = "consultation-price-navi-v263-vehicle-spec";
 const APP_SHELL = [
   "./",
   "./index.html",
   "./manifest.json",
   "./css/styles.css",
   "./css/styles.css?v=20260818-v262",
+  "./css/vehicle-quick-spec.css",
+  "./css/vehicle-quick-spec.css?v=20260901-v263-vehicle-spec",
   "./data/brand-config.js",
   "./data/brand-config.js?v=20260818-v262",
   "./js/workbook.js",
@@ -15,6 +17,8 @@ const APP_SHELL = [
   "./js/app.js?v=20260818-v262",
   "./js/pwa.js",
   "./js/pwa.js?v=20260818-v262",
+  "./js/vehicle-quick-spec.js",
+  "./js/vehicle-quick-spec.js?v=20260901-v263-vehicle-spec",
   "./vendor/jszip.min.js",
   "./icons/apple-touch-icon.png",
   "./icons/favicon-32.png",
