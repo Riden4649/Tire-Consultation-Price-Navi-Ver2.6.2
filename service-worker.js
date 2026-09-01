@@ -1,4 +1,4 @@
-const CACHE_NAME = "consultation-price-navi-v263-vehicle-spec";
+const CACHE_NAME = "consultation-price-navi-v264-size-tabs";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -6,7 +6,9 @@ const APP_SHELL = [
   "./css/styles.css",
   "./css/styles.css?v=20260818-v262",
   "./css/vehicle-quick-spec.css",
-  "./css/vehicle-quick-spec.css?v=20260901-v263-vehicle-spec",
+  "./css/vehicle-quick-spec.css?v=20260901-v264-size-filter",
+  "./css/ui-tabs-v263.css",
+  "./css/ui-tabs-v263.css?v=20260901-v263-tabs",
   "./data/brand-config.js",
   "./data/brand-config.js?v=20260818-v262",
   "./js/workbook.js",
@@ -18,7 +20,9 @@ const APP_SHELL = [
   "./js/pwa.js",
   "./js/pwa.js?v=20260818-v262",
   "./js/vehicle-quick-spec.js",
-  "./js/vehicle-quick-spec.js?v=20260901-v263-vehicle-spec",
+  "./js/vehicle-quick-spec.js?v=20260901-v264-size-filter",
+  "./js/ui-tabs-v263.js",
+  "./js/ui-tabs-v263.js?v=20260901-v263-tabs",
   "./vendor/jszip.min.js",
   "./icons/apple-touch-icon.png",
   "./icons/favicon-32.png",
