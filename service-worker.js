@@ -1,4 +1,4 @@
-const CACHE_NAME = "consultation-price-navi-v268-print-contrast-r1";
+const CACHE_NAME = "consultation-price-navi-v269-unified-ipad-r1";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -11,6 +11,8 @@ const APP_SHELL = [
   "./css/ui-tabs-v263.css?v=20260901-v266-management-tab",
   "./css/sales-flow-v267.css",
   "./css/sales-flow-v267.css?v=20260902-v268-print-contrast",
+  "./css/ui-v269.css",
+  "./css/ui-v269.css?v=20260902-v269-unified-ipad",
   "./data/brand-config.js",
   "./data/brand-config.js?v=20260818-v262",
   "./js/workbook.js",
@@ -20,7 +22,7 @@ const APP_SHELL = [
   "./js/app.js",
   "./js/app.js?v=20260818-v262",
   "./js/pwa.js",
-  "./js/pwa.js?v=20260818-v262",
+  "./js/pwa.js?v=20260902-v269",
   "./js/vehicle-quick-spec.js",
   "./js/vehicle-quick-spec.js?v=20260901-v264-size-filter",
   "./js/ui-tabs-v263.js",
@@ -28,7 +30,9 @@ const APP_SHELL = [
   "./js/sales-flow-v267.js",
   "./js/sales-flow-v267.js?v=20260901-v267-ai-team",
   "./js/version-v267.js",
-  "./js/version-v267.js?v=20260902-v268-print-contrast",
+  "./js/version-v267.js?v=20260902-v269",
+  "./js/ui-v269.js",
+  "./js/ui-v269.js?v=20260902-v269-unified-ipad",
   "./vendor/jszip.min.js",
   "./icons/apple-touch-icon.png",
   "./icons/favicon-32.png",
