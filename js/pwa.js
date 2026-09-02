@@ -23,6 +23,7 @@
 
   function loadEnhancementScripts() {
     const scripts = [
+      ["master-db-update", "js/master-db-update-v270.js?v=20260902-v270-full-master-replace"],
       ["vehicle-quick-spec", "js/vehicle-quick-spec.js?v=20260901-v264-size-filter"],
       ["ui-tabs", "js/ui-tabs-v263.js?v=20260901-v266-management-tab"],
       ["sales-flow", "js/sales-flow-v267.js?v=20260901-v267-ai-team"],
