@@ -1,0 +1,41 @@
+/* Ver2.6.9 unified tire-only UI: aligned with integrated app, optimized for iPad landscape. */
+:root{--ui-sidebar:132px;--ui-topbar:64px;--ui-green:#2f6b57;--ui-ink:#243a32;--ui-soft:#f5f8f7;--ui-line:rgba(47,107,87,.12)}
+@media (min-width:761px){
+  body{background:#f5f8f7}
+  #appModeTabs.app-mode-tabs{position:fixed!important;z-index:1200;left:0;top:0;bottom:0;width:var(--ui-sidebar);height:100dvh;margin:0!important;padding:78px 10px 16px!important;display:flex!important;flex-direction:column;gap:8px;background:#274b3f;border:0!important;border-radius:0!important;box-shadow:2px 0 14px rgba(27,55,45,.08)}
+  #appModeTabs::before{content:"商談\A価格ナビ";white-space:pre;position:absolute;left:14px;top:18px;color:#fff;font-size:15px;line-height:1.18;font-weight:900;letter-spacing:.02em}
+  #appModeTabs button{width:100%;min-height:54px;padding:8px 7px!important;border:0!important;border-radius:12px!important;background:transparent!important;color:rgba(255,255,255,.76)!important;font-size:11px!important;font-weight:800!important;text-align:center;box-shadow:none!important}
+  #appModeTabs button::before{display:block;margin:0 auto 4px;font-size:18px;line-height:1}
+  #appModeTabs button[data-app-tab="sales"]::before{content:"◉"}
+  #appModeTabs button[data-app-tab="management"]::before{content:"⚙"}
+  #appModeTabs button.selected{background:rgba(255,255,255,.14)!important;color:#fff!important}
+  .topbar{position:fixed!important;z-index:1100;left:var(--ui-sidebar)!important;right:0;top:0;min-height:var(--ui-topbar);padding:8px 18px!important;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--ui-line)}
+  .topbar .wordmark-symbol{width:34px;height:34px;font-size:16px}
+  .topbar .wordmark strong{font-size:13px}.topbar .wordmark small{font-size:8px}
+  .topbar-actions{gap:7px}.version-button,.local-badge{font-size:9px!important}
+  main.shell{max-width:none!important;margin:0 0 0 var(--ui-sidebar)!important;padding:calc(var(--ui-topbar) + 12px) 18px 28px!important}
+  .season-switcher,.finder,#vehicleQuickPanel,#resultsSection,.proposal-list-section,.admin-card{max-width:1180px;margin-left:auto!important;margin-right:auto!important}
+  #vehicleQuickPanel{margin-top:0!important;margin-bottom:10px!important;padding:12px 14px!important;border:1px solid var(--ui-line)!important;border-radius:15px!important;background:#fff!important;box-shadow:0 4px 14px rgba(35,66,55,.04)!important}
+  #vehicleQuickPanel h2,#vehicleQuickPanel h3{font-size:15px!important}
+  #vehicleQuickPanel input,#vehicleQuickPanel select,#vehicleQuickPanel button{min-height:36px!important;font-size:12px!important}
+  .finder{padding:14px!important;border-radius:16px!important;background:#fff!important;box-shadow:0 4px 14px rgba(35,66,55,.04)!important}
+  .finder-head{margin-bottom:8px!important}.finder-head h2{font-size:18px!important}.finder-head .kicker{font-size:9px!important}
+  .manual-size-flow{margin:8px 0 6px!important;padding:10px 12px!important;border-radius:13px!important;background:#f8fbfa!important}
+  .manual-size-head{margin-bottom:7px!important}.manual-size-head strong{font-size:14px!important}.manual-size-head small,.manual-size-head>span{font-size:9px!important}
+  .manual-size-input-row input{min-height:38px!important;font-size:14px!important}.manual-size-input-row button{min-height:38px!important}
+  .manual-size-results{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:6px!important}.manual-size-results button{min-height:42px!important;padding:8px 10px!important}
+  #resultsSection{margin-top:12px!important}.result-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important}
+  .result-card{padding:13px!important;border-radius:14px!important;background:#fff!important;box-shadow:0 3px 10px rgba(35,66,55,.035)!important}
+  .result-card .product-name{font-size:16px!important}.salesflow-tagline{font-size:10px!important;margin-bottom:7px!important}.result-card .tire-size{font-size:12px!important}
+  .result-card .price-pair>div{padding:8px 9px!important}.result-card .price-pair strong{font-size:16px!important}
+  .result-card .labor-total{display:flex!important;align-items:center;justify-content:space-between;gap:8px;margin-top:8px!important;padding:8px 9px!important;border-radius:10px!important;background:#edf5f1!important;color:var(--ui-ink)!important;font-size:10px!important}
+  .result-card .labor-total strong{font-size:15px!important;color:var(--ui-green)!important}
+  .proposal-list-section{padding-top:2px}.proposal-list{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+  #adminPanel[data-mode="management"]{margin-top:0!important;border-radius:16px!important;background:#fff!important}
+  #adminPanel[data-mode="management"]>summary{display:none!important}
+  #adminPanel[data-mode="management"] .admin-body{padding:14px!important;gap:14px!important}
+  .compare-grid{gap:8px!important}.compare-card{padding:12px!important}.compare-total{background:var(--ui-green)!important;padding:9px 10px!important;border-radius:9px!important;border-top:0!important}.compare-total span,.compare-total strong{color:#fff!important;-webkit-text-fill-color:#fff!important}
+}
+@media (max-width:900px) and (min-width:761px){.result-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.manual-size-results{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
+@media (max-width:760px){#appModeTabs.app-mode-tabs{position:sticky;top:0;z-index:1000}.result-card .labor-total{display:flex!important}.compare-total{background:var(--ui-green)!important}.compare-total span,.compare-total strong{color:#fff!important;-webkit-text-fill-color:#fff!important}}
+@media print{#appModeTabs{display:none!important}.topbar{position:static!important}.shell{margin-left:0!important;padding:0!important}.compare-total{background:#2f6b57!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.compare-total span,.compare-total strong{color:#fff!important;-webkit-text-fill-color:#fff!important}}
