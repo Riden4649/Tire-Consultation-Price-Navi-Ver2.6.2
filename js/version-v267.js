@@ -1,6 +1,6 @@
 (() => {
   "use strict";
-  const VERSION = "2.6.8";
+  const VERSION = "2.6.9";
   const UPDATED_AT = "2026/09/02";
 
   function installPrintFix() {
