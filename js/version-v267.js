@@ -1,9 +1,47 @@
 (() => {
   "use strict";
-  const VERSION = "2.6.7";
-  const UPDATED_AT = "2026/09/01";
+  const VERSION = "2.6.8";
+  const UPDATED_AT = "2026/09/02";
+
+  function installPrintFix() {
+    if (document.querySelector("#v268PrintContrastFix")) return;
+    const style = document.createElement("style");
+    style.id = "v268PrintContrastFix";
+    style.textContent = `
+      .compare-sheet .compare-total,
+      #compareDialog .compare-total {
+        background:#2f6b57!important;
+        border-top-color:#2f6b57!important;
+        padding:10px 12px!important;
+        border-radius:8px!important;
+        -webkit-print-color-adjust:exact;
+        print-color-adjust:exact;
+      }
+      .compare-sheet .compare-total span,
+      .compare-sheet .compare-total strong,
+      #compareDialog .compare-total span,
+      #compareDialog .compare-total strong {
+        color:#fff!important;
+        -webkit-text-fill-color:#fff!important;
+        opacity:1!important;
+      }
+      @media print {
+        .compare-sheet .compare-total,
+        #compareDialog .compare-total { background:#2f6b57!important; }
+        .compare-sheet .compare-total span,
+        .compare-sheet .compare-total strong,
+        #compareDialog .compare-total span,
+        #compareDialog .compare-total strong {
+          color:#fff!important;
+          -webkit-text-fill-color:#fff!important;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  }
 
   function apply() {
+    installPrintFix();
     const button = document.querySelector("#versionButton");
     if (button && button.textContent !== `商談ナビ Ver ${VERSION}`) button.textContent = `商談ナビ Ver ${VERSION}`;
     const number = document.querySelector("#versionNumber");
