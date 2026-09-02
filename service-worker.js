@@ -1,4 +1,4 @@
-const CACHE_NAME = "consultation-price-navi-v269-unified-ipad-r1";
+const CACHE_NAME = "consultation-price-navi-v270-full-master-replace-r1";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -22,7 +22,9 @@ const APP_SHELL = [
   "./js/app.js",
   "./js/app.js?v=20260818-v262",
   "./js/pwa.js",
-  "./js/pwa.js?v=20260902-v269",
+  "./js/pwa.js?v=20260902-v270-full-master-replace",
+  "./js/master-db-update-v270.js",
+  "./js/master-db-update-v270.js?v=20260902-v270-full-master-replace",
   "./js/vehicle-quick-spec.js",
   "./js/vehicle-quick-spec.js?v=20260901-v264-size-filter",
   "./js/ui-tabs-v263.js",
