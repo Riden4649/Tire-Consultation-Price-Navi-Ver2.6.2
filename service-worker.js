@@ -1,4 +1,4 @@
-const CACHE_NAME = "consultation-price-navi-v267-ai-team-r3";
+const CACHE_NAME = "consultation-price-navi-v268-print-contrast-r1";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -10,7 +10,7 @@ const APP_SHELL = [
   "./css/ui-tabs-v263.css",
   "./css/ui-tabs-v263.css?v=20260901-v266-management-tab",
   "./css/sales-flow-v267.css",
-  "./css/sales-flow-v267.css?v=20260901-v267-ai-team",
+  "./css/sales-flow-v267.css?v=20260902-v268-print-contrast",
   "./data/brand-config.js",
   "./data/brand-config.js?v=20260818-v262",
   "./js/workbook.js",
@@ -28,7 +28,7 @@ const APP_SHELL = [
   "./js/sales-flow-v267.js",
   "./js/sales-flow-v267.js?v=20260901-v267-ai-team",
   "./js/version-v267.js",
-  "./js/version-v267.js?v=20260901-v267",
+  "./js/version-v267.js?v=20260902-v268-print-contrast",
   "./vendor/jszip.min.js",
   "./icons/apple-touch-icon.png",
   "./icons/favicon-32.png",
